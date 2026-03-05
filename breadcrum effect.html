@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        display: flex;
+        list-style: none;
+      }
+      li::before {
+        content: " --->>";
+      }
+      li:first-child ::before {
+        content: "";
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Home</li>
+      <li>Electrons</li>
+      <li>Mobiles</li>
+      <li>samsung</li>
+    </ul>
+  </body>
+</html>

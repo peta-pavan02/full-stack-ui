@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt{
+            font-weight: bold;
+       }
+       .username:invalid+div{
+        display: inline;
+        color: red;
+       }
+       .username:valid+div{
+        display: none;
+       }
+       .mobile:valid+div{
+        display: none;
+       }
+       .mobile:invalid+div{
+        display: block;
+        color: red;
+
+       }
+       .username:read-only{
+        cursor: not-allowed;
+       }
+    </style>
+</head>
+<body>
+    <form >
+        <dt>UserName
+            <dd>
+               FirstName: <input type="text" required class="username" autofocus value="Raju" readonly>
+                <div> UserName is Required</div>
+            </dd>
+        </dt>
+        <dt>MobileNumber</dt>
+        <dd>
+           MobileNumber: <input type="text" pattern="\d{10}" class="mobile">
+           <div> Invalid Mobile Number ,10 digits required</div>
+        </dd>
+    </form>
+</body>
+</html>

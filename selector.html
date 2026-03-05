@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input + span {
+        display: none;
+      }
+      input:required {
+        background-color: green;
+      }
+      input:required + span {
+        display: inline;
+        color: red;
+      }
+      input:optional {
+        background-color: pink;
+      }
+      #username:valid ~ div {
+        display: none;
+      }
+      #age:out-of-range ~ div {
+        display: block;
+        color: red;
+      }
+      #age:in-range + div {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <dl>
+      <dt>User Name</dt>
+      <dd><input type="text" required id="username" /> <span>*</span></dd>
+      <div>User Name Is Required</div>
+      <dt>Mobile No</dt>
+      <dd><input type="text" required /> <span>*</span></dd>
+      <dt>Age</dt>
+      <dd><input type="text" id="age" min="15" max="40" /><span>*</span></dd>
+      <div>Age Should be 15 to 40</div>
+    </dl>
+    <button>Submit</button>
+  </body>
+</html>

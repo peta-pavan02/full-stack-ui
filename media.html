@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style media="screen">
+      .qr {
+        display: none;
+      }
+      .details {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+      }
+      dt {
+        background-color: blue;
+        color: white;
+        margin-bottom: 20px;
+      }
+    </style>
+    <style media="print">
+      button,
+      .poster {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <dl style="width: 300px">
+      <dt>Bookingummery</dt>
+      <img src="qr.jpeg" width="300px" height="200px" class="qr" />
+      <img src="images.jfif" class="poster" />
+      <dl class="details">
+        <dt>Movie Name</dt>
+        <dd>OG</dd>
+        <dt>Time</dt>
+        <dd>6:00 PM</dd>
+        <dt>Date</dt>
+        <dd>01-03-2025</dd>
+      </dl>
+    </dl>
+    <button onclick="window.print()">Print Ticket</button>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="bootstrap-icons-1.11.3/font/bootstrap-icons.css"
+    />
+    <script>
+      function BookClick() {
+        document.getElementById("Summery").style.display = "block";
+        document.getElementById("labelname").innerHTML =
+          document.getElementById("movie").value;
+        document.getElementById("labelTheatre").innerHTML =
+          document.getElementById("Teatre").value;
+        document.getElementById("labelDate").innerHTML =
+          document.getElementById("date").value;
+        document.getElementById("labelTiming").innerHTML =
+          document.getElementById("Time").value;
+        movieName = document.getElementById("movie").value;
+        if (movieName == Court) {
+          document.getElementById("poster").src = "Court.jpg";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="mt-3 d-flex justify-content-between bg-dark p-2">
+      <div>
+        <select class="form-select" id="movie">
+          <option value="">Select Movie</option>
+          <option value="">Court</option>
+          <option value="">RRR</option>
+        </select>
+      </div>
+      <div>
+        <select class="form-select" id="Teatre">
+          <option>Select Teatre</option>
+          <option>GVK Cinema</option>
+          <option>GVK Ameerpet</option>
+        </select>
+      </div>
+      <div>
+        <select class="form-select" id="date">
+          <option value="">Slect Date</option>
+          <option value="">Today 4-Apr-2026</option>
+          <option value="">Tomorrow 5-Apr-2026</option>
+        </select>
+      </div>
+      <div>
+        <select class="form-select" id="Time">
+          <option value="">Slect Timing</option>
+          <option value="">10:30 AM</option>
+          <option value="">03:30PM</option>
+        </select>
+      </div>
+      <div>
+        <select class="form-select" id="Seat">
+          <option>Select Seats</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select>
+      </div>
+      <div>
+        <button onclick="BookClick()" class="btn btn-primary">Book</button>
+      </div>
+    </div>
+    <div style="display: none" id="Summery">
+      <dl class="w-25 p-1 mt-3">
+        <h3 class="bg-dark text-white">Booking Summery</h3>
+        <dt>
+          <img id="poster" width="100% " height="200" />
+        </dt>
+        <dt>Movie Name</dt>
+        <dd id="labelname"></dd>
+        <dt>Theatre</dt>
+        <dd id="labelTheatre"></dd>
+        <dt>Date</dt>
+        <dd id="labelDate"></dd>
+        <dt>Timing</dt>
+        <dd id="labelTiming"></dd>
+        <dt>Seats</dt>
+        <dd id="labelSeats"></dd>
+      </dl>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+  </body>
+</html>

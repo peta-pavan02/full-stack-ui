@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      dt {
+        font-weight: bold;
+      }
+      ul {
+        list-style: none;
+        border: 1px solid black;
+        width: 100px;
+        height: 60px;
+        overflow: auto;
+        padding: 10px;
+      }
+      .note {
+        border: 1px solid black;
+        padding: 10px;
+        width: 200px;
+      }
+      .terms:checked + label {
+        color: blue;
+      }
+      .terms + label {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <dl>
+        <dt>Select Course</dt>
+        <dd>
+          <ul>
+            <li><input type="checkbox" /> UI</li>
+            <li><input type="checkbox" />Java</li>
+            <li><input type="checkbox" />Python</li>
+            <li><input type="checkbox" />MongoDB</li>
+            <li><input type="checkbox" /> Sql</li>
+          </ul>
+        </dd>
+      </dl>
+      <div><label> Terms Of Condition</label></div>
+      <div class="note">
+        Read Our Terms Of Service Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Repellat harum, aut veniam temporibus voluptatum culpa
+        natus ipsa facilis cum quaerat nostrum magni ad, recusandae a dolores
+        enim fugiat! Quibusdam quia velit blanditiis facere quidem ipsum, quam
+        quo cupiditate pariatur nulla atque perspiciatis dolorem. Culpa autem
+        eos vero distinctio nostrum provident quibusdam numquam ipsum qui
+        soluta, sequi excepturi tempore, ducimus quaerat, inventore sunt fugit
+        velit? Sapiente, sed? Explicabo, pariatur illo cum soluta quos vitae ea
+        dolor! Esse fuga praesentium sapiente explicabo.
+      </div>
+      <div>
+        <input type="checkbox" class="terms" /> <label> I Accepect</label>
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

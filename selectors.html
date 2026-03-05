@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #username + div {
+        display: none;
+      }
+      #username:focus + div {
+        display: block;
+      }
+      #username:focus {
+        background-color: yellow;
+      }
+      #username + :read-only {
+        cursor: not-allowed;
+      }
+      #terms + span {
+        color: red;
+      }
+      #terms:checked + span {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <dl>
+      <dt>User Name</dt>
+      <dd>
+        <input
+          type="text"
+          placeholder="User Name"
+          id="username"
+          value="Pavan"
+          readonly
+        />
+        <div>User Name Is Required</div>
+      </dd>
+      <dt>Terms Of Services</dt>
+      <dd><input type="checkbox" id="terms" /><span> I Accepected</span></dd>
+    </dl>
+    <button disabled>Submit</button>
+  </body>
+</html>

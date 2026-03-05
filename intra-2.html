@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .topic {
+        padding: 10px;
+        box-shadow: 2px 2px 2px black;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border: 1px solid black;
+      }
+      .programs {
+        display: flex;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        background-color: black;
+        padding: 10px;
+      }
+      li {
+        margin-right: 70px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      li :hover {
+        background-color: green;
+      }
+      .topic:target {
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#html"> HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#javascript">JAVASCRIPT</a></li>
+      </ul>
+    </nav>
+    <div class="programs">
+      <div id="html" class="topic">
+        <h2>HTML</h2>
+        <p>It is aMarkUp language</p>
+      </div>
+      <div id="css" class="topic">
+        <h2>CSS</h2>
+        <p>It Defines Styles for Html</p>
+      </div>
+      <div id="javascript" class="topic">
+        <h2>JavaScript</h2>
+        <p>It is a Clint Side Language</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="bootstrap-icons-1.11.3/font/bootstrap-icons.css"
+    />
+    <script>
+      function registerclick(){
+        document.getElementById("detailscontainer").style.display="block"
+        document.getElementById("lblName").innerHTML=document.getElementById("name").value;
+        document.getElementById("lblprice").innerHTML=document.getElementById("price").value;
+        document.getElementById("lblcity").innerHTML=document.getElementById("city").value;
+        stockStatus=""
+        stockCheckBox=document.getElementById("stock");
+        if(stockCheckBox.checked){
+          stockStatus="Avilable";
+          else{
+            stockStatus="Out Of Stack"
+          }
+          document.getElementById
+        }
+
+      }
+    </script>
+  </head>
+  <div id="registerContainer" class="mt-4">
+    <button class=" btn btn-primary" data-bs-target="#register" data-bs-toggle="modal">Register Prodect</button>
+  </div>
+  <div style="display: none;" id="detailscontainer">
+    <h3>Prodect Details</h3>
+    <dl>
+      <dt>Prodect Name</dt>
+      <dd id="lblName"></dd>
+      <dt>Price</dt>
+      <dd id="lblprice"></dd>
+      <dt>City</dt>
+      <dd id="lblcity"></dd>
+      <dt>Stock</dt>
+      <dd id="lblavilable"></dd>
+    </dl>
+  </div>
+  <div class="modal" id="register">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Register Prodect</h3>
+          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <dl>
+            <dt>Prodect Name</dt>
+            <dd> <input type="text" id="name" class="form-control"></dd>
+            <dt>Price</dt>
+            <dd> <input type="text"  id="price" class="form-control"></dd>
+            <dt>Shiped to</dt>
+            <dd >
+              <select class="form-control" id="city">
+                <option value="">Delhi</option>
+                <option value="">Bangalore</option>
+                <option value="">Hydrabad</option>
+              </select>
+            </dd>
+            <dt>Stock</dt>
+            <dd class="form-switch"> <input type="checkbox" class="form-check-input" id="stock"> Avilable</dd>
+          </dl>
+
+        </div>
+        <div class="modal-footer">
+          <button onclick="registerclick()"  class="btn btn-primary" data-bs-dismiss="modal"> Register</button>
+          <button class="btn btn-danger" data-bs-dismiss="modal"> Cancel</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+  </body>
+</html>
