@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function VerifyCard() {
+        var card = document.getElementById("Card").value;
+        var cardimg = Document.getElementById("cardImage");
+        if (card.startsWith("4550")) {
+          cardimg.src = "visa.png";
+        }else if(card.startsWith("5540")){
+            cardimg.src=""
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <dl>
+      <dt>Your Card Number</dt>
+      <dd>
+        <input type="text" onblur="verifyCard()" id="Card" />
+        <img width="60" id="cardImage" />
+      </dd>
+    </dl>
+  </body>
+</html>
