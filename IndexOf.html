@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function verifyEmail() {
+        var email = document.getElementById("Email").value;
+        var error = document.getElementById(Error);
+        if (email.indexOf("@") == -1) {
+          error.innerHTML = "Invalid Email: Please Include @ ";
+        } else {
+          error.innerHTML = "";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Email: <input type="text" onblur="verifyEmail()" id="Email" />
+    <span id="Error"></span>
+  </body>
+</html>
