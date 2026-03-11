@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function verifyCode() {
+        var code = document.getElementById("code").value;
+        var error = document.getElementById("error");
+        if (code.ChatAt(0) == "S") {
+          error.innerHTML = "";
+        } else {
+          error.innerHTML = "Invalid Code".fontcolor("red");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    SBI IFSC CODE: <input type="text" onkeyup="verifyCode()" id="code" />
+    <span id="error"></span>
+  </body>
+</html>

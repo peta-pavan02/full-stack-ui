@@ -17,6 +17,13 @@
         function IntrestChange(){
           document.getElementById("textintrest").value=document.getElementById("RangeIntrest").value;
         } 
+        function Calculatelick(){
+          var p=pardeInt(document.getElementById("textAmount").value);
+          var n=parseInt(document.getElementById("textYear").value)*12;
+          var r=parseInt(document.getElementById("textintrest").value)/12/100;
+          var EMI=p*r*Math.pow(1+r,n)/Math.pow(1+r,n)-1;
+          document.getElementById("result").innerHTML="Monthly Installment For Your Amount is" + p +"For"+ n +"Months Is"+ EMI;
+        }
     </script>
   </head>
   <body class="container-fluid">
@@ -30,14 +37,18 @@
       <div class="row">
         <div class="col">&#8377; 50000 <input type="range" onchange="AmountChange()" id="RangeAmount" min="50000" max="100000" /> &#8377 1000000</div>
         <div class="col"> 1 Year <input type="range" max="5" min="1" onchange="RateChange()" id="RangeYear"> 5 Years</div>
-        <div class="col"> 10.0% <input type="range" id="RangeIntrest" onchange="IntrestChange()"> 20.0%</div>
+        <div class="col"> 10% <input type="range" id="RangeIntrest" onchange="IntrestChange()" max="20" min="10gi"> 21%</div>
         
       </div>
       <div class="row mt-3">
         <div class="col text-center">
-          <button class="btn btn-primary">Calculate</button>
+          <button class="btn btn-primary" onclick="Calculatelick()">Calculate</button>
         </div>
       </div>
+      <div>
+        <p id="result"></p>
+      </div>
     </div>
+    
   </body>
 </html>
