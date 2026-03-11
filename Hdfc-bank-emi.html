@@ -25,12 +25,12 @@
       <div class="row">
         <div class="col">Amount You need &#8377; <input id="textAmount" "text" /></div>
         <div class="col">For <input type="text" size="2"  id="textYear"/> Years</div>
-        <div class="col">Intrest rate <input type="text" id="textintrest" />%</div>
+        <div class="col">Intrest rate <input type="text" id="textintrest" min="10" max="" />%</div>
       </div>
       <div class="row">
         <div class="col">&#8377; 50000 <input type="range" onchange="AmountChange()" id="RangeAmount" min="50000" max="100000" /> &#8377 1000000</div>
         <div class="col"> 1 Year <input type="range" max="5" min="1" onchange="RateChange()" id="RangeYear"> 5 Years</div>
-        <div class="col"> 15.0% <input type="range" id="RangeIntrest" onchange="IntrestChange()"</div>
+        <div class="col"> 10.0% <input type="range" id="RangeIntrest" onchange="IntrestChange()"> 20.0%</div>
         
       </div>
       <div class="row mt-3">
