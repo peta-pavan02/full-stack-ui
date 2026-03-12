@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function AllChanges() {
+        var abc = document.getElementById("All");
+        if (abc.checked == true) {
+          document.getElementById("pens").checked = true;
+          document.getElementById("books").checked = true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" onclick="AllChanges()" id="All" /> Selct All <br />
+    <input type="checkbox" id="pens" />Pens <br />
+    <input type="checkbox" id="books" />Books
+  </body>
+</html>
