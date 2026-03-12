@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      function AllChanges() {
-        var abc = document.getElementById("All");
-        if (abc.checked == true) {
-          document.getElementById("pens").checked = true;
-          document.getElementById("books").checked = true;
+      function VeryfyName() {
+        var username = document.getElementById("userName").value;
+        var buttion = document.querySelector("button");
+        if ((username = "")) {
+          buttion.disabled = true;
         } else {
-          document.getElementById("pens").checked = false;
-          document.getElementById("books").checked = false;
+          buttion.disabled = false;
         }
       }
     </script>
   </head>
   <body>
-    <input type="checkbox" onclick="AllChanges()" id="All" /> Selct All <br />
-    <input type="checkbox" id="pens" />Pens <br />
-    <input type="checkbox" id="books" />Books
+    <dl>
+      <dt>User Name</dt>
+      <dd>
+        <input
+          type="text"
+          onkeyup="VeryfyName()"
+          placeholder="User Name Is Required"
+          id="userName"
+        />
+      </dd>
+    </dl>
+    <button disabled>Register</button>
   </body>
 </html>
